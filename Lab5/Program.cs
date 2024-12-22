@@ -12,26 +12,6 @@ public class Program
     public static void Main()
     {
         Program program = new Program();
-        int[] a = { 5, 2, 3, 4, 5 };
-        int n = a.Length/2;
-        while(n > 0)
-        {
-            for (int i = n;i <  a.Length;i++)
-            {
-                int key = a[i],j = i - n;
-                while(j >= 0 && a[j] > key)
-                {
-                    a[j + n] = a[j];
-                    j -= n;
-                }
-                a[j + n] = key;
-            }
-            n /= 2;
-        }
-        for (int i = 0; i < a.Length; i++)
-        {
-            Console.WriteLine(a[i]);
-        }
     }
 
     #region Level 1
